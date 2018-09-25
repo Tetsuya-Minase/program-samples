@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Getting Started</title>
+</head>
+<body>
+    好きな言語を英語で入れてください。<br>
+    ※ちなみに対応しているのは日本語、英語、スペイン語、ドイツ語です。<br>
+    <input id="country" type="text"><button type="button" onclick="transtrationGreeting()">変換</button>
+    <script type="text/javascript">
+    class Main {
+
+        transtrationGreeting = () => {
+            const country = document.getElementById('country');
+            console.log(country.value);
+        }
+    }
+    </script>
+</body>
+
+</html>
