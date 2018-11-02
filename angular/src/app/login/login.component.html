@@ -1,0 +1,16 @@
+<form [formGroup]="formGroup">
+  <div>
+    <div>
+      ユーザID：<input type="text" formControlName="userID" required>
+      <app-ng-message [form]="userID"></app-ng-message>
+    </div>
+    <div>
+      パスワード：<input type="text" formControlName="password" required>
+      <app-ng-message [form]="userID"></app-ng-message>
+    </div>
+    <div>
+      e-mail：<input type="text" formControlName="email" required>
+      <app-ng-message [form]="email"></app-ng-message>
+    </div>
+  </div>
+</form>

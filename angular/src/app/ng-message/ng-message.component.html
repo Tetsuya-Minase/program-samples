@@ -1,0 +1,17 @@
+<div *ngIf="form.invalid && (form.dirty || form.touched)">
+  <span *ngIf="userID.hasError('required')">
+    必須です。
+  </span>
+  <span *ngIf="userID.hasError('maxlength')">
+    最大5文字です。
+  </span>
+  <span *ngIf="userID.hasError('minlength')">
+    最低8文字です。
+  </span>
+  <span *ngIf="userID.hasError('email')">
+    e-mailアドレスのフォーマットにしてください。(xxx@hogehoge.com)
+  </span>
+  <span *ngIf="userID.hasError('duplicateEmail')">
+    入力頂いたアドレスは重複しています。
+  </span>
+</div>
