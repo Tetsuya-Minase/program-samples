@@ -1,5 +1,6 @@
 <template>
   <div class="todo">
+    <!-- <ListComponent :addItems="addList"/> -->
     <ListComponent :addItems="addList"/>
   </div>
 </template>
