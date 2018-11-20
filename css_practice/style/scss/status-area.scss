@@ -1,0 +1,19 @@
+$white: #fff;
+$black: #000;
+
+.status-area {
+    border: solid;
+    border-color: $white;
+    color: $white;
+    width: 10vw;
+    &__character1{
+        padding-left: 20px;
+
+        &__name {
+            background-color: $black;
+            margin-top: -10px;
+            margin-left: 2vw;
+            width: 65px;
+        }
+    }
+}

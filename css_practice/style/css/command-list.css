@@ -1,0 +1,6 @@
+.command-list {
+  list-style: none; }
+  .command-list__command-title {
+    color: #fff; }
+  .command-list__command:checked {
+    font-size: 20px; }

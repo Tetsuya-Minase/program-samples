@@ -1,0 +1,29 @@
+.skill-area {
+  border: solid;
+  border-color: $white;
+  display: none;
+  height: $height;
+  margin-left: 2vw;
+  vertical-align: middle;
+  width: $detailWidth;
+
+  &__skill-list {
+    float: left;
+    list-style: none;
+    margin-left: -30px;
+    width: $detailWidth;
+
+    &__skill-title {
+      color: $white;
+      float: left;
+      width: $detailWidth/2;
+    }
+    &__skill {
+      display: none;
+    }
+    &__skill:checked + &__skill-text:before {
+      content: "▷";
+      font-weight: bold;
+    }
+  }
+}

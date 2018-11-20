@@ -1,0 +1,29 @@
+.command-area {
+  border: solid;
+  border-color: $white;
+  display: inline-block;
+  height: $height;
+  vertical-align: middle;
+  width: $menuWidth;
+  &__command-list {
+    list-style: none;
+    margin-left: 10px;
+    &__command-title {
+      color: $white;
+    }
+    &__command {
+      display: none;
+    }
+    &__command:checked + &__command-text:before {
+      animation: Flash1 1s infinite;
+      content: "▷";
+      font-weight: bold;
+    }
+  }
+}
+
+@keyframes Flash1 {
+  50% {
+    opacity: 0;
+  }
+}

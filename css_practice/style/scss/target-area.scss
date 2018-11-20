@@ -1,0 +1,31 @@
+.target-area {
+  border: solid;
+  border-color: $white;
+  display: none;
+  height: $height;
+  margin-left: 2vw;
+  vertical-align: middle;
+  width: $detailWidth;
+
+  &__target-list {
+    list-style: none;
+    margin-left: -30px;
+    &__target-title {
+      color: $white;
+    }
+    &__target {
+      display: none;
+    }
+    &__target:checked + &__target-text:before {
+      animation: Flash1 1s infinite;
+      content: "▷";
+      font-weight: bold;
+    }
+  }
+}
+
+@keyframes Flash1 {
+  50% {
+    opacity: 0;
+  }
+}

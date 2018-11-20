@@ -1,0 +1,11 @@
+// 定数系
+@import 'constant';
+// コンポーネントごとのCSS
+@import 'command-list';
+@import 'status-area';
+@import 'target-area';
+@import 'skill-area';
+
+body {
+    background-color: black;
+}

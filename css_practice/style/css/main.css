@@ -1,0 +1,86 @@
+@charset "UTF-8";
+.command-area {
+  border: solid;
+  border-color: #fff;
+  vertical-align: middle;
+  display: inline-block;
+  height: 130px;
+  width: 10vw; }
+  .command-area__command-list {
+    list-style: none;
+    margin-left: 10px; }
+    .command-area__command-list__command-title {
+      color: #fff; }
+    .command-area__command-list__command {
+      display: none; }
+    .command-area__command-list__command:checked + .command-area__command-list__command-text:before {
+      animation: Flash1 1s infinite;
+      content: "▷";
+      font-weight: bold; }
+
+@keyframes Flash1 {
+  50% {
+    opacity: 0; } }
+
+.status-area {
+  border: solid;
+  border-color: #fff;
+  color: #fff;
+  width: 10vw; }
+  .status-area__character1 {
+    padding-left: 20px; }
+    .status-area__character1__name {
+      background-color: #000;
+      margin-top: -10px;
+      margin-left: 2vw;
+      width: 65px; }
+
+.target-area {
+  border: solid;
+  border-color: #fff;
+  vertical-align: middle;
+  display: none;
+  height: 130px;
+  margin-left: 2vw;
+  width: 16vw; }
+  .target-area__target-list {
+    list-style: none;
+    margin-left: -30px; }
+    .target-area__target-list__target-title {
+      color: #fff; }
+    .target-area__target-list__target {
+      display: none; }
+    .target-area__target-list__target:checked + .target-area__target-list__target-text:before {
+      animation: Flash1 1s infinite;
+      content: "▷";
+      font-weight: bold; }
+
+@keyframes Flash1 {
+  50% {
+    opacity: 0; } }
+
+.skill-area {
+  border: solid;
+  border-color: #fff;
+  display: none;
+  vertical-align: middle;
+  height: 130px;
+  margin-left: 2vw;
+  width: 16vw; }
+  .skill-area__skill-list {
+    float: left;
+    list-style: none;
+    margin-left: -30px;
+    width: 16vw; }
+    .skill-area__skill-list__skill-title {
+      color: #fff;
+      float: left;
+      width: 8vw; }
+    .skill-area__skill-list__skill {
+      display: none; }
+    .skill-area__skill-list__skill:checked + .skill-area__skill-list__skill-text:before {
+      content: "▷";
+      font-weight: bold; }
+
+body {
+  background-color: black; }
