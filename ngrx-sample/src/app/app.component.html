@@ -1,0 +1,7 @@
+<input type="text" #text><br>
+<button type="button" (click)="add(text.value)">Add</button>
+<button type="button" (click)="delete()">Delete</button>
+<button type="button" (click)="reset()">Reset</button>
+<ul>
+  <li *ngFor="let todo of todolist">{{todo}}</li>
+</ul>
