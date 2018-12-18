@@ -1,10 +1,11 @@
 @charset "UTF-8";
+
 .command-area {
   border: solid;
   border-color: #fff;
-  vertical-align: middle;
   display: inline-block;
   height: 130px;
+  vertical-align: middle;
   width: 10vw; }
   .command-area__command-list {
     list-style: none;
@@ -38,10 +39,10 @@
 .target-area {
   border: solid;
   border-color: #fff;
-  vertical-align: middle;
   display: none;
   height: 130px;
   margin-left: 2vw;
+  vertical-align: middle;
   width: 16vw; }
   .target-area__target-list {
     list-style: none;
@@ -63,9 +64,9 @@
   border: solid;
   border-color: #fff;
   display: none;
-  vertical-align: middle;
   height: 130px;
   margin-left: 2vw;
+  vertical-align: middle;
   width: 16vw; }
   .skill-area__skill-list {
     float: left;
@@ -84,3 +85,8 @@
 
 body {
   background-color: black; }
+
+div ul {
+  background-color: #000; }
+  div ul li {
+    color: #fff; }
