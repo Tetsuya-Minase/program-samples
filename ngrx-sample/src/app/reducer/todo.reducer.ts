@@ -1,16 +1,19 @@
-import { Action } from '@ngrx/store';
-import { ActionTypes } from '../action/todo.action';
+import { ActionsUnion, add, del, reset, fetch } from '../action/todo.action';
 
 export const initialList: Array<string> = [];
 
-export function todoReducer(state = initialList, action: Action): Array<string> {
+export function todoReducer(state = initialList, action: ActionsUnion): Array<string> {
     switch (action.type) {
-        case ActionTypes.Add:
-            return [...state, action['payload']['text']];
-        case ActionTypes.Delete:
+        case add.type:
+            console.log('state', state);
+            console.log('action', action);
+            return [...state, action.payload];
+        case del.type:
             return state.filter((value, index) => index !== (state.length - 1));
-        case ActionTypes.Reset:
+        case reset.type:
             return [];
+        case fetch.type:
+            return [...action.payload];
         default:
             return state;
     }

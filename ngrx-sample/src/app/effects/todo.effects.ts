@@ -3,7 +3,7 @@ import {Actions, Effect, ofType} from '@ngrx/effects';
 import {EMPTY} from 'rxjs';
 import {catchError, map, mergeMap} from 'rxjs/operators';
 import {TodoService} from '../service/todo.service';
-import {ActionTypes, Fetch} from '../action/todo.action';
+import {load, fetch} from '../action/todo.action';
 
 @Injectable()
 export class TodoEffects {
@@ -11,11 +11,11 @@ export class TodoEffects {
     @Effect()
     loadTodo$ = this.actions$
         .pipe(
-            ofType(ActionTypes.Load),
+            ofType(load.type),
             mergeMap(() => this.todoService.fetchAll()
                 .pipe(
                     map(serverTodo => {
-                        return new Fetch({todos: serverTodo});
+                        return fetch(serverTodo);
                     }),
                     catchError(() => EMPTY)
                 ))
