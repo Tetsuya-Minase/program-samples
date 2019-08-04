@@ -1,0 +1,11 @@
+{
+  "name": "npm-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-touch": "touch"
+  },
+  "author": "",
+  "license": "ISC"
+}
