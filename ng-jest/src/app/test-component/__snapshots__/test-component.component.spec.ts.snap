@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TestComponentComponent snapshot test 1`] = `
+<app-test-component>
+  <p>
+    test-component works!
+  </p>
+</app-test-component>
+`;
