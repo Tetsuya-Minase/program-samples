@@ -1,8 +1,8 @@
 import 'package:angular/angular.dart';
 
 @Component(
-  selector: 'app-component',
-  templateUrl: 'app_component.html',
+  selector: 'my-app',
+  template: '<h1>Hello {{name}}</h1>',
 )
 class AppComponent {
   var name = 'Angular';
