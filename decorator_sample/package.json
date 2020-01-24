@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "reflect-metadata": "^0.1.13",
     "typescript": "^3.7.5"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 /**
- * 下記の引数を受け取る
+ * 下記のpropertyを受け取る
  * @param target decoratorを付けたpropertyのclassのprototype
- * @param member プロパティ名
+ * @param member member名
  */
 function propertyDecoratorSample(target: any, member: string): any {
   const propertyDescriptor: PropertyDescriptor = {
