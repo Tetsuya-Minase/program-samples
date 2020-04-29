@@ -5,6 +5,7 @@ import { EffectComponent } from './samples/Effect';
 import { ContextComponent } from './samples/Context';
 import { ReducerComponent } from './samples/Reducer';
 import { CallbackComponent } from './samples/Callback';
+import { MemoComponent } from './samples/Memo';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ContextComponent />
       <ReducerComponent />
       <CallbackComponent />
+      <MemoComponent />
     </>
   );
 }
