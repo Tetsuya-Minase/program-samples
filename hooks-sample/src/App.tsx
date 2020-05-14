@@ -6,6 +6,7 @@ import { ContextComponent } from './samples/Context';
 import { ReducerComponent } from './samples/Reducer';
 import { CallbackComponent } from './samples/Callback';
 import { MemoComponent } from './samples/Memo';
+import { RefComponent } from './samples/Ref';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <ReducerComponent />
       <CallbackComponent />
       <MemoComponent />
+      <RefComponent />
     </>
   );
 }
