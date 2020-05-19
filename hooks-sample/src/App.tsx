@@ -7,6 +7,7 @@ import { ReducerComponent } from './samples/Reducer';
 import { CallbackComponent } from './samples/Callback';
 import { MemoComponent } from './samples/Memo';
 import { RefComponent } from './samples/Ref';
+import { ImperativeHandleComponent } from './samples/ImperativeHandle';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <CallbackComponent />
       <MemoComponent />
       <RefComponent />
+      <ImperativeHandleComponent />
     </>
   );
 }
