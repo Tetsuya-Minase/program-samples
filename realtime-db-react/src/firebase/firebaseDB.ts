@@ -38,7 +38,10 @@ export const useDatabaseDocument = () => {
   const ref = useDatabase();
   const updateDocument = useSetDocument(ref);
   const {data: registeredData} = useFetchAllData();
-  const setDocuments = useCallback((registerData: { [key: string]: string }) => updateDocument({...registeredData, registerData}), [updateDocument]);
+  
+  const setDocuments = useCallback((registerData: { [key: string]: string }) => {
+    updateDocument({...registeredData, ...registerData});
+  }, [updateDocument, registeredData]);
 
   return setDocuments;
 };
