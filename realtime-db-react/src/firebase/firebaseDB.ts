@@ -34,7 +34,7 @@ const useSetDocument = (ref: firebase.database.Reference) => {
   return updateDocument;
 };
 
-export const useDatabaseDocument = () => {
+export const useSetData = () => {
   const ref = useDatabase();
   const updateDocument = useSetDocument(ref);
   const {data: registeredData} = useFetchAllData();
