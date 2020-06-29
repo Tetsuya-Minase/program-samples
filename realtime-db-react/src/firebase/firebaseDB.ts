@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from 'react';
+import { useMemo, useState, useEffect, useCallback } from 'react';
 import { firebase } from './firebase';
 
 // カスタムフックにしておく
@@ -7,7 +7,7 @@ const useDatabase = () => {
   return useMemo(() => firebase.database().ref('/sample'), []);
 };
 const useFetchData = (ref: firebase.database.Reference) => {
-  const [data, setData] = useState<{[key: string]: string}>();
+  const [data, setData] = useState<{ [key: string]: string }>();
   useEffect(() => {
     ref.on('value', snapshot => {
       if (snapshot && snapshot.val()) {
@@ -23,4 +23,23 @@ const useFetchData = (ref: firebase.database.Reference) => {
 export const useFetchAllData = () => {
   const ref = useDatabase();
   return useFetchData(ref);
+};
+
+const useSetDocument = (ref: firebase.database.Reference) => {
+  const updateDocument = useCallback(
+    (document: unknown) => {
+      ref.set(document);
+    }, [ref]
+  );
+  return updateDocument;
+};
+
+export const useDatabaseDocument = () => {
+  const ref = useDatabase();
+  const updateDocument = useSetDocument(ref);
+  const setDocuments = useCallback(
+    (registerData: { [key: string]: string }) => updateDocument(registerData), [updateDocument]
+  );
+
+  return setDocuments;
 };
