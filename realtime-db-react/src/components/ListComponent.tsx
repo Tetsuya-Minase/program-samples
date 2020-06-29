@@ -1,9 +1,10 @@
-import React from 'react';
-type Props = {
-  dataList: Array<{[key: string]: string}>
-};
+import React, { useMemo } from 'react';
+import { useFetchAllData } from '../firebase/firebaseDB';
 
-export const ListComponent: React.FC<Props> = ({dataList}) => {
+export const ListComponent: React.FC = () => {
+  const { data } = useFetchAllData();
+  const dataList = useMemo(() => Object.entries(data || {}).map(([key, value]) => ({ key, value })), [data]);
+
   return <dl>{dataList.map(({ key, value }) =>
     <React.Fragment key={`${key}${value}`}>
       <dt>key: {key}</dt>

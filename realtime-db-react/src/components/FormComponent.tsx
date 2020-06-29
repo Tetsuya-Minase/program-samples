@@ -1,10 +1,9 @@
 import React, { useState, ChangeEvent } from 'react';
+import { useSetData } from '../firebase/firebaseDB';
 
-type Props = {
-  setDocument: (registerData: {[key: string]: string}) => void
-}
+export const FormComponent: React.FC = () => {
+  const setDocument = useSetData();
 
-export const FormComponent: React.FC<Props> = ({setDocument}) => {
   const [keyData, setKeyData] = useState<string>('');
   const [valueData, setValueData] = useState<string>('');
   return <>
