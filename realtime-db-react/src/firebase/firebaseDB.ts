@@ -4,7 +4,7 @@ import { firebase } from './firebase';
 // カスタムフックにしておく
 const useDatabase = () => {
   // 同じパスでは毎回同じ結果が得られるのでmemo化しておく
-  return useMemo(() => firebase.database().ref('/sample'), []);
+  return useMemo(() => firebase.database().ref(`/sample/`), []);
 };
 const useFetchData = (ref: firebase.database.Reference) => {
   const [data, setData] = useState<{ [key: string]: string }>();
@@ -34,14 +34,39 @@ const useSetDocument = (ref: firebase.database.Reference) => {
   return updateDocument;
 };
 
-export const useSetData = () => {
+export const useRegisterData = () => {
   const ref = useDatabase();
-  const updateDocument = useSetDocument(ref);
+  const setDocument = useSetDocument(ref);
   const {data: registeredData} = useFetchAllData();
   
-  const setDocuments = useCallback((registerData: { [key: string]: string }) => {
-    updateDocument({...registeredData, ...registerData});
-  }, [updateDocument, registeredData]);
+  const registerData = useCallback((registerData: { [key: string]: string }) => {
+    setDocument({...registeredData, ...registerData});
+  }, [setDocument, registeredData]);
 
-  return setDocuments;
+  return registerData;
 };
+
+const useUpdateDocument = (ref: firebase.database.Reference) => {
+  const updateDocument = useCallback((document: Object) => ref.update(document), [ref]);
+  return updateDocument;
+}
+
+export const useUpdateData = () => {
+  const ref = useDatabase();
+  const updateDocument = useUpdateDocument(ref);
+  const updateData = useCallback((registerData: {[key: string]: string}) => {
+    updateDocument(registerData);
+  }, [updateDocument]);
+  return updateData;
+}
+
+const useRemoveDocument = (ref: firebase.database.Reference) => {
+  const deleteDocument = useCallback(() => ref.remove(), [ref]);
+  return deleteDocument;
+}
+export const useDelteData = () => {
+  const ref = useDatabase();
+  const removeDocument = useRemoveDocument(ref);
+  const deleteData = useCallback(() => removeDocument(), [removeDocument])
+  return deleteData;
+}
