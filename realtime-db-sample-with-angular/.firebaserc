@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fir-db-c228d": {
+      "hosting": {
+        "realtime-db-sample-with-angular": [
+          "fir-db-c228d"
+        ]
+      }
+    }
+  }
+}

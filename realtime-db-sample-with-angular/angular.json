@@ -124,8 +124,53 @@
               "devServerTarget": "realtime-db-sample-with-angular:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    },
+    "firebase": {
+      "projectType": "library",
+      "root": "projects/firebase",
+      "sourceRoot": "projects/firebase/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/firebase/tsconfig.lib.json",
+            "project": "projects/firebase/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/firebase/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/firebase/src/test.ts",
+            "tsConfig": "projects/firebase/tsconfig.spec.json",
+            "karmaConfig": "projects/firebase/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/firebase/tsconfig.lib.json",
+              "projects/firebase/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "realtime-db-sample-with-angular"
 }
