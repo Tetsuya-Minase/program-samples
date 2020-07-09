@@ -7,7 +7,7 @@
     "start-all": "run-s build-libraries start",
     "build": "ng build",
     "build-all": "run-s build-libraries build",
-    "build-libraries": "run-p \"ng build firebase\"",
+    "build-libraries": "run-p \"ng build firebase-library\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

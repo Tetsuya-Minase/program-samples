@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseUsecaseService } from 'firebase';
+import { FirebaseUsecaseService } from 'firebase-library';
 import { Observable, Subject, BehaviorSubject } from 'rxjs';
 @Component({
   selector: 'app-list',

@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
-import { FirebaseModule } from 'firebase';
+import { FirebaseLibraryModule } from 'firebase-library';
 import { FormComponent } from './components/form/form.component';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { FormComponent } from './components/form/form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FirebaseModule
+    FirebaseLibraryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
