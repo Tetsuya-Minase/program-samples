@@ -24,6 +24,10 @@
       "firebase": [
         "dist/firebase/firebase",
         "dist/firebase"
+      ],
+      "firebase-library": [
+        "dist/firebase-library/firebase-library",
+        "dist/firebase-library"
       ]
     }
   },

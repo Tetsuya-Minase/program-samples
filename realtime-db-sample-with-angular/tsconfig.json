@@ -21,6 +21,12 @@
     },
     {
       "path": "./projects/firebase/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/firebase-library/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/firebase-library/tsconfig.spec.json"
     }
 ]
 }
