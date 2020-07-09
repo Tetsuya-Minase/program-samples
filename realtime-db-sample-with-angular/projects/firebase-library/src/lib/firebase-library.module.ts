@@ -16,6 +16,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     BrowserModule
   ],
   providers: [FirebaseUsecaseService],
-  exports: []
+  exports: [LoginComponent]
 })
 export class FirebaseLibraryModule { }
