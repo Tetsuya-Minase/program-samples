@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -16,7 +17,8 @@ import { FormComponent } from './components/form/form.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FirebaseLibraryModule
+    FirebaseLibraryModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,6 +6,7 @@ import { FirebaseUsecaseService } from './service/firebase-usecase.service';
 import { firebaseConfig } from './config/config';
 import { LoginComponent } from './components/login/login.component';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { FirebaseFormatterService } from './service/firebase-formatter.service';
 
 @NgModule({
   declarations: [LoginComponent],
@@ -15,7 +16,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AngularFireAuthModule,
     BrowserModule
   ],
-  providers: [FirebaseUsecaseService],
+  providers: [FirebaseUsecaseService, FirebaseFormatterService],
   exports: [LoginComponent]
 })
 export class FirebaseLibraryModule { }
