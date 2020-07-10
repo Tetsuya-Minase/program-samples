@@ -1,0 +1,15 @@
+<div>
+  <lib-login></lib-login>
+</div>
+<form [formGroup]="formGroup">
+  <label>key: <input type="text" formControlName="key"/></label>
+  <div *ngIf="key?.invalid && (key?.dirty || key?.touched)">
+    <span *ngIf="key?.hasError('required')">必須です。</span>
+  </div>
+  <label>value: <input type="text" formControlName="value"/></label>
+  <div *ngIf="value?.invalid && (value?.dirty || value?.touched)">
+    <span *ngIf="value?.hasError('required')">必須です。</span>
+  </div>
+  <button (click)="registerData()">登録</button>
+</form>
+<button (click)="deleteAll()">全消し</button>
