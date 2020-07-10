@@ -23,6 +23,9 @@ export class FormComponent implements OnInit {
   async registerData() {
     await this.firebase.setDocument({key: this.key?.value, value: this.value?.value});
   }
+  deleteAll() {
+    this.firebase.deleteAll();
+  }
   
   get key() {
     return this.formGroup.get('key');

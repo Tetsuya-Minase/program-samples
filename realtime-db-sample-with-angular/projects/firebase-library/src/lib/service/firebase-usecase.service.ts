@@ -24,4 +24,8 @@ export class FirebaseUsecaseService {
     
     this.db.object('sample').set(registerDocument);
   }
+
+  deleteAll() {
+    this.db.object('sample').remove();
+  }
 }
