@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>HelloSample</title>
 </head>
 <body>
     <H1>Hello World!</H1>
+    <form th:object="${helloModel}" th:action="@{/hello/register}" th:method="post">
+        <select name="language">
+            <option th:value="ja">日本語</option>
+            <option th:value="en">英語</option>
+        </select>
+        <label>Name: <input type="text" th:field="*{name}"/></label>
+        <button type="submit">OK</button>
+    </form>
 </body>
 </html>
