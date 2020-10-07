@@ -11,6 +11,8 @@
 //! ドキュメントコメントを出力するには`cargo doc`でできる。  
 //! ブラウザで見たければ、`cargo doc --open`
 
+mod struct_sample;
+
 /// こちらのコメントはmain関数に対するコメント。  
 /// 基本文法のサンプルを書いていく
 fn main() {
@@ -29,7 +31,6 @@ fn main() {
     println!("名前の指定もできる。 id: {id} / name: {name} / age: {age}", id="0001", name="Piyota", age="20");
     eprint!("print!と同じ。こちらは標準エラーに出力される");
     eprintln!("println!と同じ。こちらは標準エラーに出力される");
-  
     // 変数宣言はlet。型定義は変数名の後ろに`:型名`で定義
     // 1文字はchar。
     let char1: char = 'a';
@@ -71,5 +72,7 @@ fn main() {
     let list: [i32; 3] = [1, 3, 5];
     // タプル。(型, 型,...)で型定義できる
     let tuple: (i32, bool, char) = (1, true, 'c');
+
+    struct_sample::structSample();
   }
   
