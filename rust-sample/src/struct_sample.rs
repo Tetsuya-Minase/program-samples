@@ -26,7 +26,7 @@ struct Rectangle {
   bottom_right: Point,
 }
 
-pub fn structSample() {
+pub fn struct_sample() {
   // 変数から構造体を作成する
   let name = "Peter";
   let age = 27;
@@ -43,24 +43,24 @@ pub fn structSample() {
   println!("point coordinates: ({}, {})", point.x, point.y);
   // 構造体から別の構造体を作成する
   // 指定しなかった要素は元の要素を引き継ぐ
-  let anotherPoint = Point { x: 20.3, ..point };
+  let another_point = Point { x: 20.3, ..point };
   // anotherPoint.yはpoint.yと同じ値になる
-  println!("second point: ({}, {})", anotherPoint.x, anotherPoint.y);
+  println!("second point: ({}, {})", another_point.x, another_point.y);
 
   // `let`を使用してpointを分解できる
   let Point {
-    x: pointX,
-    y: pointY,
+    x: point_x,
+    y: point_y,
   } = point;
-  println!("pointX: {}, pontY: {}", pointX, pointY);
+  println!("pointX: {}, pontY: {}", point_x, point_y);
 
   let _rectangle = Rectangle {
     // 構造体の定義とインスタンスの作成を同時に行う
     top_left: Point {
-      x: pointX,
-      y: pointY,
+      x: point_x,
+      y: point_y,
     },
-    bottom_right: anotherPoint,
+    bottom_right: another_point,
   };
 
   // ユニットをインスタンス化

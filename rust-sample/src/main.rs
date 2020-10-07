@@ -45,7 +45,8 @@ fn main() {
     // 浮動小数点。f32 or f64
     let float1: f32 = 3.141592;
     // 真偽値。true / false
-    let boolean: bool = true;
+    // 使わない変数は頭に`_`をつけて置かないとbuild時に警告が出る(なので、ホントは全部付けた方が良い)
+    let _boolean: bool = true;
     
     // 型定義は書かなくても推論してくれる。
     let char2 = 'b';
@@ -73,6 +74,7 @@ fn main() {
     // タプル。(型, 型,...)で型定義できる
     let tuple: (i32, bool, char) = (1, true, 'c');
 
-    struct_sample::structSample();
+    // `struct_sample.rs`の`struct_sample`を実行
+    struct_sample::struct_sample();
   }
   
