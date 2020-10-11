@@ -12,6 +12,7 @@
 //! ブラウザで見たければ、`cargo doc --open`
 
 mod struct_sample;
+mod enum_sample;
 
 /// こちらのコメントはmain関数に対するコメント。  
 /// 基本文法のサンプルを書いていく
@@ -76,5 +77,8 @@ fn main() {
 
     // `struct_sample.rs`の`struct_sample`を実行
     struct_sample::struct_sample();
+
+    // `enum_sample.rs`の`enum_sample`を実行
+    enum_sample::enum_sample();
   }
   
