@@ -1,5 +1,8 @@
 // グローバル変数はあらゆるスコープの外で宣言する
+// Rustの定数には`static`と`const`があり、型を明示する必要がある
+// スタティックなライフタイムを持つミュータブルな値
 static LANGUAGE: &str = "Rust";
+// `const`で宣言すると不変な値となる。(通常はこっちを使う)
 const THRESHOLD: i32 = 10;
 
 fn is_big(n: i32) -> bool {
