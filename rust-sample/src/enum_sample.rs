@@ -28,6 +28,7 @@ impl VeryVerboseEnumOfThingsToDoWithNumbers {
 
 // 渡されたWebEvent野無いようによって出力する文字を変える
 fn inspect(event: WebEvent) {
+  // matchは他言語で言うところのswitchに似ているもの
   match event {
     WebEvent::PageLoad => println!("page loaded"),
     WebEvent::PageUnload => println!("page unloaded"),
