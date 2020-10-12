@@ -13,6 +13,7 @@
 
 mod struct_sample;
 mod enum_sample;
+mod constant_sample;
 
 /// こちらのコメントはmain関数に対するコメント。  
 /// 基本文法のサンプルを書いていく
@@ -80,5 +81,8 @@ fn main() {
 
     // `enum_sample.rs`の`enum_sample`を実行
     enum_sample::enum_sample();
+    enum_sample::enum_use_sample();
+
+    constant_sample::constant_sample();
   }
   

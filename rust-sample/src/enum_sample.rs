@@ -70,7 +70,7 @@ enum Work {
   Soldier,
 }
 
-fn enum_use_sample() {
+pub fn enum_use_sample() {
   // `use`することで絶対名でなくとも使用可能になる。
   use Status::{Poor, Rich};
   // `Work`の中の名前をすべて`use`する
