@@ -1,11 +1,8 @@
 use actix_files;
-use actix_web::{get, web, App, HttpResponse, HttpServer, Responder, Result};
+use actix_web::{web, App, HttpResponse, HttpServer, Responder, Result};
 
-// こう書くことで、`/`にGetのリクエストが来たときのハンドリングができる
-#[get("/")]
 async fn index() -> Result<actix_files::NamedFile> {
-    println!("indexだよ");
-    Ok(actix_files::NamedFile::open("target/debug/public/index.html")?)
+    Ok(actix_files::NamedFile::open("target/public/index.html")?)
 }
 
 // `#[get(...)]`を指定しないと使うときに指定するときもできる
@@ -17,12 +14,17 @@ async fn manual_greet() -> impl Responder {
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
-        // マクロでroutingを指定した関数はserviceに渡せばOK
-        .service(actix_files::Files::new("", "target/debug/public").show_files_listing())
-        .service(index)
+        // ルートにアクセスされたときは`index.html`を返す
+        .route("/", web::get().to(index))
         // routingを指定していない関数には、ここで指定することができる
         // ↓であれば、`/hey`にgetのリクエストが来たとき
         .route("/hey", web::get().to(manual_greet))
+        // 上記までにマッチしなければ、フォルダに飛ばす
+        .service(actix_files::Files::new("", "target/public"))
+        // どこにもマッチしなければ`index.html`を返す
+        .default_service(
+            web::route().to(index)
+        )
     })
     .bind("127.0.0.1:8080")?
     .run()
