@@ -1,3 +1,4 @@
+import { HttpService } from './../service/http.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstPageComponent implements OnInit {
 
-  constructor() { }
+  private _firstData$: string[] = [];
+
+  constructor(private readonly httpService: HttpService) { }
 
   ngOnInit(): void {
+    this.httpService.get<string[]>('/api/first').subscribe(
+      res => this._firstData$ = res,
+      err => console.error('err: ', err)
+    );
   }
-
+  get firstData() {
+    return this._firstData$;
+  }
 }

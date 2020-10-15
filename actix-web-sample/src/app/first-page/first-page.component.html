@@ -1,7 +1,12 @@
-<p>first-page works!</p>
-<li>
-  <a routerLink="/">First Page</a>
-</li>
-<li>
-  <a routerLink="/second">Second Page</a>
-</li>
+<h1>first-page works!</h1>
+<ul>
+  <li>
+    <a routerLink="/">First Page</a>
+  </li>
+  <li>
+    <a routerLink="/second">Second Page</a>
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let item of firstData">{{item}}</li>
+</ul>

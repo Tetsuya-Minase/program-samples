@@ -1,7 +1,12 @@
-<p>second-page works!</p>
-<li>
-  <a routerLink="/">First Page</a>
-</li>
-<li>
-  <a routerLink="/second">Second Page</a>
-</li>
+<h1>second-page works!</h1>
+<ul>
+  <li>
+    <a routerLink="/">First Page</a>
+  </li>
+  <li>
+    <a routerLink="/second">Second Page</a>
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let item of secondDataList">id: {{item.id}} / name: {{item.name}}</li>
+</ul>
