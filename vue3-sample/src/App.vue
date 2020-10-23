@@ -1,27 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <Todo />
+  </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import { defineComponent } from "vue";
+import { Store } from 'vuex';
+import Todo from "./components/Todo.vue";
 
-export default defineComponent({
-  name: 'App',
-  components: {
-    HelloWorld
+const store = new Store({
+  state: {
+    todoList: ['hoge', 'huga', 'piyo']
+  },
+  mutations: {
+    addTodoList(state, value) {
+      state.todoList = [state.todoList, value];
+    }
   }
 });
-</script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+export default defineComponent({
+  name: "App",
+  store,
+  components: {
+    Todo
+  },
+});
+</script>
