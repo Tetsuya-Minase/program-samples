@@ -29,3 +29,5 @@ export default defineComponent({
   },
 });
 </script>
+<style src="./assets/styles/main.css">
+</style>
