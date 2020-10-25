@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <input v-model="value" />
-    <button type="button" @click="updateList">登録</button>
+  <div class="mt-4">
+    <input class="inline-block border border-gray-700 h-8 p-2" v-model="value" />
+    <button class="shadow w-20 h-8 ml-4 bg-blue-400 text-white rounded-md" type="button" @click="updateList">登録</button>
   </div>
 </template>
 <script lang="ts">

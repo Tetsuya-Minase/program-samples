@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>TodoList</h1>
+    <h1 class="font-bold text-5xl">TodoList</h1>
     <TodoList />
     <TodoForm />
   </div>

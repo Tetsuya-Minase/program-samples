@@ -20,3 +20,9 @@ export default defineComponent({
   }
 });
 </script>
+<style scoped>
+  li::before {
+    content: '▷';
+    margin-right: 4px;
+  }
+</style>

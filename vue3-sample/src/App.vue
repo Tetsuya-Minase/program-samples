@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col items-center">
     <img alt="Vue logo" src="./assets/logo.png" />
     <Todo />
   </div>
