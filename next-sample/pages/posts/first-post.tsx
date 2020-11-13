@@ -1,8 +1,15 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import { GetStaticProps } from 'next';
+
+type Props = {
+  props: {
+    pageTitle: string;
+  }
+};
 
 // 関数名は何でも良いけど、default exportする必要がある
-export default function FirstPost({pageTitle}) {
+export default function FirstPost({pageTitle}: {pageTitle: string}) {
   return (
     <>
       <Head>
@@ -15,7 +22,7 @@ export default function FirstPost({pageTitle}) {
 }
 
 // getStaticPropsはdevelop時にはリクエストごとに走るが、production時にはビルド時に実行される
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const pageTitle = 'First Post';
   return {
     props: {
@@ -23,14 +30,3 @@ export async function getStaticProps() {
     }
   }
 }
-
-// getStaticPropsをexport or なにもexportしないとSSGの挙動になる
-// getServerSidePropsをexportするとSSRになる
-// export async function getServerSideProps() {
-//   const pageTitle = 'First Post';
-//   return {
-//     props:{
-//       pageTitle
-//     }
-//   }
-// }
