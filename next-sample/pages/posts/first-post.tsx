@@ -2,12 +2,6 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 
-type Props = {
-  props: {
-    pageTitle: string;
-  }
-};
-
 // 関数名は何でも良いけど、default exportする必要がある
 export default function FirstPost({pageTitle}: {pageTitle: string}) {
   return (
