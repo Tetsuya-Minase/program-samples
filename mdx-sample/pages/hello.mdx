@@ -1,8 +1,22 @@
+import {HeaderComponent} from '../components/header/Header.tsx';
+
 # sample
 ここから↓がjsx.
 <article>
-  <h1>Hello World!</h1>
+  <HeaderComponent heading="Hello World!"/>
   <div style={{backgroundColor: 'red', fontSize: '200%'}}>
     sample text.
+  </div>
+</article>
+<article>
+  <HeaderComponent heading="Hello World!" color="red"/>
+  <div style={{backgroundColor: 'red', fontSize: '200%'}}>
+    red heading.
+  </div>
+</article>
+<article>
+  <HeaderComponent heading="Hello World!" color="blue"/>
+  <div style={{backgroundColor: 'red', fontSize: '200%'}}>
+    blue heading.
   </div>
 </article>
