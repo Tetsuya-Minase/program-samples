@@ -8,6 +8,8 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^10.0.4",
     "next": "latest",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
