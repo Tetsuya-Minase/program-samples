@@ -1,0 +1,37 @@
+import {HeaderComponent} from '../components/header/Header.tsx';
+import {CodeBlockComponent} from '../components/codeblock/CodeBlock.tsx';
+
+# sample
+ここから↓がjsx.
+<article>
+  <HeaderComponent heading="Hello World!"/>
+  <div style={{backgroundColor: 'red', fontSize: '200%'}}>
+    sample text.
+  </div>
+</article>
+<article>
+  <HeaderComponent heading="Hello World!" color="red"/>
+  <div style={{backgroundColor: 'red', fontSize: '200%'}}>
+    red heading.
+  </div>
+</article>
+<article>
+  <HeaderComponent heading="Hello World!" color="blue"/>
+  <div style={{backgroundColor: 'red', fontSize: '200%'}}>
+    blue heading.
+  </div>
+</article>
+
+<CodeBlockComponent
+  code={`
+  const hoge = 'hoge';
+  console.log(hoge);
+  `}
+  language="javascript"
+/>
+
+↓はハイライトされない
+```js
+const hoge = 'hoge';
+console.log(hoge);
+```

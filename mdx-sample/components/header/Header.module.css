@@ -1,0 +1,9 @@
+.header {
+  font-size: 28px;
+}
+.header--red {
+  color: red;
+}
+.header--blue {
+  color: blue;
+}
