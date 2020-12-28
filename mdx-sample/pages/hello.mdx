@@ -1,4 +1,5 @@
 import {HeaderComponent} from '../components/header/Header.tsx';
+import {CodeBlockComponent} from '../components/codeblock/CodeBlock.tsx';
 
 # sample
 ここから↓がjsx.
@@ -20,3 +21,17 @@ import {HeaderComponent} from '../components/header/Header.tsx';
     blue heading.
   </div>
 </article>
+
+<CodeBlockComponent
+  code={`
+  const hoge = 'hoge';
+  console.log(hoge);
+  `}
+  language="javascript"
+/>
+
+↓はハイライトされない
+```js
+const hoge = 'hoge';
+console.log(hoge);
+```
