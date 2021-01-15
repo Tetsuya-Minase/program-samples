@@ -8,6 +8,7 @@
     "nx": "nx",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --prod",
     "test": "ng test",
     "lint": "nx workspace-lint && ng lint",
     "e2e": "ng e2e",
@@ -27,6 +28,7 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "scully": "scully",
+    "scully:prod": "scully --scanRoutes --prod --RSD",
     "scully:serve": "scully serve"
   },
   "private": true,
