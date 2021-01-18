@@ -29,7 +29,11 @@
     "help": "nx help",
     "scully": "scully",
     "scully:prod": "scully --scanRoutes --prod --RSD",
-    "scully:serve": "scully serve"
+    "scully:serve": "scully serve",
+    "firebase": "firebase",
+    "firebase:deploy": "firebase deploy",
+    "firebase:local": "firebase emulators:start",
+    "generate:package": "node tools/generators/package-json-generator.js"
   },
   "private": true,
   "dependencies": {
@@ -48,6 +52,9 @@
     "@scullyio/init": "^1.0.1",
     "@scullyio/ng-lib": "^1.0.0",
     "@scullyio/scully": "^1.0.0",
+    "firebase-admin": "^9.4.2",
+    "firebase-functions": "^3.13.1",
+    "firebase-tools": "^9.2.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
