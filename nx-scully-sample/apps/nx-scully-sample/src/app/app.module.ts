@@ -1,4 +1,3 @@
-import { SecondComponent } from './components/second/second.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
