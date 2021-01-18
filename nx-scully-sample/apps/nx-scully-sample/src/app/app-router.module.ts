@@ -5,7 +5,7 @@ import { TopComponent } from './components/top/top.component';
 
 const routes: Routes = [
   { path: '', component: TopComponent },
-  { path: 'second', loadChildren: () => import('./components/second/second.module').then(m => m.SecondModule)}
+  { path: 'second', component: SecondComponent}
 ];
 
 @NgModule({

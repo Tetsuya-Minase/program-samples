@@ -1,3 +1,4 @@
+import { SecondComponent } from './components/second/second.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -6,11 +7,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { AppRoutingModule } from './app-router.module';
 import { TopComponent } from './components/top/top.component';
-import { SecondModule } from './components/second/second.module';
 
 @NgModule({
-  declarations: [AppComponent, TopComponent],
-  imports: [BrowserModule, HttpClientModule, ScullyLibModule, AppRoutingModule, SecondModule],
+  declarations: [AppComponent, TopComponent, SecondComponent],
+  imports: [BrowserModule, HttpClientModule, ScullyLibModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
