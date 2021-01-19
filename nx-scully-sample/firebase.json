@@ -5,12 +5,19 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/v1/**/*",
+        "function": "api"
+      },
+      {
+        "source": "/*[!v1]*/**",
+        "destination": "/"
+      }
     ]
   },
   "functions": {
-    "source": "dist/apps/api",
-    "predeploy": [
-      "npm run nx -- 'build api'"
-    ]
+    "source": "dist/apps/api"
   }
 }
