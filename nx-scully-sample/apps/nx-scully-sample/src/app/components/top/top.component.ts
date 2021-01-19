@@ -8,6 +8,6 @@ import { Message } from '@nx-scully-sample/api-interfaces';
   styleUrls: ['./top.component.scss'],
 })
 export class TopComponent {
-  hello$ = this.http.get<Message>('/api/hello');
+  hello$ = this.http.get<Message>('/v1/hello');
   constructor(private http: HttpClient) {}
 }
