@@ -1,0 +1,23 @@
+{
+  "hosting": {
+    "public": "dist/static",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/v1/**/*",
+        "function": "api"
+      },
+      {
+        "source": "/*[!v1]*/**",
+        "destination": "/"
+      }
+    ]
+  },
+  "functions": {
+    "source": "dist/apps/api"
+  }
+}

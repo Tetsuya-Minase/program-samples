@@ -67,4 +67,7 @@ typings/
 # next.js build output
 .next
 
+# firebase output
+.firebase
+
 package-lock.json
