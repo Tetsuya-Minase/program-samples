@@ -7,3 +7,6 @@ export function division(dividend: number, divisor: number) {
   }
   return dividend / divisor;
 }
+export function multiplication(a: number, b: number) {
+  return a * b;
+}

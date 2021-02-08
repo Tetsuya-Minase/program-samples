@@ -1,7 +1,7 @@
 beforeEach(() => {
   console.log('このファイル内のテストケースの前に実行される');
 });
-describe('setup and teardown sample.', () => {
+xdescribe('setup and teardown sample.', () => {
   beforeAll(() => {
     console.log('全テストケースの前に実行される');
   });
