@@ -5,7 +5,7 @@ const countState = atom({
 });
 const selectEvenNumber = selector({
   key: 'selectEvenNumber',
-  get: ({get}) => {
+  get: ({ get }) => {
     const count = get(countState);
     return count % 2 === 0 ? 'Yes' : 'No';
   }
@@ -13,7 +13,7 @@ const selectEvenNumber = selector({
 const useCountClick = () => {
   const [count, setCount] = useRecoilState<number>(countState);
   const onClick = () => setCount(count + 1);
-  return <button onClick={onClick}>+1</button>
+  return <button onClick={onClick}>+1</button>;
 }
 const useCheckCount = () => {
   const [count,] = useRecoilState<number>(countState);
