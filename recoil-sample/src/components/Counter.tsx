@@ -19,8 +19,7 @@ const useCheckCount = () => {
   const [count,] = useRecoilState<number>(countState);
   const isEven = useRecoilValue(selectEvenNumber);
   return <div>
-    Question: is {count} even?<br/>
-    Answer: {isEven}
+    is {count} even? {isEven}
   </div>
 }
 
