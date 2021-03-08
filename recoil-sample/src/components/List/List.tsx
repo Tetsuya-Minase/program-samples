@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
-import { atom, useRecoilState } from "recoil";
-import { get } from "../usecase/Fetch";
+import { useEffect } from 'react'
+import { atom, useRecoilState } from 'recoil';
+import { get } from '../usecase/Fetch';
 
 type JsonList = {
   readonly key: string;
