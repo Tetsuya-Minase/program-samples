@@ -24,7 +24,6 @@ const useFetchList = () => {
   useEffect(() => {
     (async () => {
       const result = await get<JsonList>('http://localhost:8080/api/v1/json/sample');
-      console.log('result', result);
 
       if (result instanceof Error) {
         return;
