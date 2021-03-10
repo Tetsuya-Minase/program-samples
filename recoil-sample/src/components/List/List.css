@@ -3,7 +3,7 @@
   flex-direction: column;
   border: solid 1px #000;
   border-radius: 4px;
-  width: 500px;
+  width: 600px;
 }
 
 .list__label {
@@ -31,12 +31,12 @@
 
 .list__title {
   border-left: solid 1px #000;
-  width: calc(100% / 3);
+  width: calc(100% / 4);
 }
 .list__value {
   text-align: center;
   border-left: solid 1px #000;
-  width: calc(100% / 3);
+  width: calc(100% / 4);
   /* 左マージン打ち消し */
   margin-inline-start: 0;
 }

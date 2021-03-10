@@ -16,21 +16,12 @@ const router = (request, response) => {
   }
   if (path.endsWith('/json/sample') && method === 'GET') {
     const result = {
-      key: 'sample',
-      data: {
-        hoge: {
-          id: 1,
-          value: 'hogehoge'
-        },
-        huga: {
-          id: 2,
-          value: 'hugahuga'
-        },
-        piyo: {
-          id: 3,
-          value: 'piyopiyo'
-        }
-      }
+      count: 3,
+      data: [
+        {id: 1, value: 'サンプルプログラムを書く', completionDate: '2021-03-10', isCompleted: true},
+        {id: 2, value: 'テストコード書く', completionDate: '2021-03-11', isCompleted: false},
+        {id: 3, value: '記事を書く', completionDate: '2021-03-12', isCompleted: false},
+      ]
     }
     sendResponse(200, result, response);
     return;
