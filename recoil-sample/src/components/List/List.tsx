@@ -60,9 +60,9 @@ export const List = () => {
   return <dl className="list">
     <div className="list__label">
       <dt className="list__title">id</dt>
-      <dt className="list__title">value</dt>
-      <dt className="list__title">completionData</dt>
-      <dt className="list__title">isCompleted</dt>
+      <dt className="list__title">やること</dt>
+      <dt className="list__title">完了日</dt>
+      <dt className="list__title">状態</dt>
     </div>
     {result.data.map(({ id, value, completionDate, completed }) => {
       return <div className="list__item">
