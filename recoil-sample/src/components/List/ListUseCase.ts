@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { get } from '../usecase/Fetch';
-import { todoListState, getTodoListView, TodoListState, TodoListView } from './model/TodoList';
+import { todoListState, getTodoListView, TodoListState, TodoListView } from '../model/TodoList';
 
 export const useFetchList = () => {
   const [, setState] = useRecoilState<TodoListState>(todoListState);
