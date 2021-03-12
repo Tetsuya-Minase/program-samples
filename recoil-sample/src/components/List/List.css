@@ -33,10 +33,19 @@
   border-left: solid 1px #000;
   width: calc(100% / 4);
 }
+.list__title:first-of-type {
+  /* 一番左の要素は左ボーダー消す */
+  border-left: none;
+}
+
 .list__value {
   text-align: center;
   border-left: solid 1px #000;
   width: calc(100% / 4);
   /* 左マージン打ち消し */
   margin-inline-start: 0;
+}
+.list__value:first-of-type {
+  /* 一番左の要素は左ボーダー消す */
+  border-left: none;
 }
