@@ -7,7 +7,7 @@ export const useFetchList = () => {
   const [, setState] = useRecoilState<TodoListState>(todoListState);
   useEffect(() => {
     (async () => {
-      const result = await get<TodoListState>('http://localhost:8080/api/v1/json/sample');
+      const result = await get<TodoListState>('http://localhost:8080/api/v1/json');
 
       if (result instanceof Error) {
         return;
