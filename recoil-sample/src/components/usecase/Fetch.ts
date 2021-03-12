@@ -1,9 +1,9 @@
 type Method = 'GET' | 'POST';
 
-const fetchClient = async<T, U>(url: string, method: Method, body?: T): Promise<U | Error> => {
+const fetchClient = async<B, R>(url: string, method: Method, body?: B): Promise<R | Error> => {
   const request: RequestInit = {
     method,
-    headers: new Headers({'Content-Type': 'application/json'}),
+    headers: new Headers({ 'Content-Type': 'application/json' }),
     body: JSON.stringify(body)
   }
   const response = await fetch(url, request);
@@ -16,4 +16,7 @@ const fetchClient = async<T, U>(url: string, method: Method, body?: T): Promise<
 
 export const get = async<R>(url: string): Promise<R | Error> => {
   return await fetchClient<never, R>(url, 'GET');
-}
+};
+export const post = async<R, B>(url: string, body: B): Promise<R | Error> => {
+  return await fetchClient<B, R>(url, 'POST', body);
+};

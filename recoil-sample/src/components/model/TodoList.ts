@@ -1,12 +1,18 @@
 import { atom, selector } from 'recoil';
+export interface TodoItem {
+  readonly value: string;
+  readonly completionDate: string;
+  readonly isCompleted: boolean;
+}
+export interface TodoItemState {
+  readonly id: number;
+  readonly value: string;
+  readonly completionDate: string;
+  readonly isCompleted: boolean;  
+}
 export interface TodoListState {
   readonly count: number;
-  readonly data: Array<{
-    readonly id: number;
-    readonly value: string;
-    readonly completionDate: string;
-    readonly isCompleted: boolean;
-  }>;
+  readonly data: Array<TodoItemState>;
 }
 export interface TodoListView {
   readonly count: number;
