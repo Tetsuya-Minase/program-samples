@@ -4,15 +4,22 @@ export interface TodoItem {
   readonly completionDate: string;
   readonly isCompleted: boolean;
 }
-export interface TodoItemState {
-  readonly id: number;
-  readonly value: string;
-  readonly completionDate: string;
-  readonly isCompleted: boolean;  
+export interface TodoItemResponse {
+  readonly result: {
+    readonly id: number;
+    readonly value: string;
+    readonly completionDate: string;
+    readonly isCompleted: boolean;
+  }
 }
 export interface TodoListState {
   readonly count: number;
-  readonly data: Array<TodoItemState>;
+  readonly data: Array<{
+    readonly id: number;
+    readonly value: string;
+    readonly completionDate: string;
+    readonly isCompleted: boolean;
+  }>;
 }
 export interface TodoListView {
   readonly count: number;
