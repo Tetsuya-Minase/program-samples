@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
 
-function App() {
+const App: React.VFC = () => {  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <label>
+      画像: 
+      <input type="file" accept="image/png, image/jpeg" onChange={ async (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.files === null) {
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = (e: ProgressEvent<FileReader>) => {
+          if (typeof e.target?.result === 'string') {
+            // ,より後ろがbase64文字列なので区切って2番目を取得
+            console.log('base64文字列：', e.target.result.split(',')[1]);
+          }
+        }
+        reader.readAsDataURL(e.target.files[0]);
+      }}/>
+    </label>
   );
 }
 
