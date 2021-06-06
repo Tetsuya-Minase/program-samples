@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"vsicons.presets.angular": true,
+		"typescript.tsdk": "node_modules/typescript/lib"
+	}
+}
