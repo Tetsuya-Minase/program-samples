@@ -16,7 +16,7 @@ interface Props {
 }
 export const Image = ({ url }: Props): JSX.Element => {
   return <Wrapper>
-    <img src={url} />
+    {/* <img src={url} /> */}
     <StyledImage src={url} />
   </Wrapper>;
 };
