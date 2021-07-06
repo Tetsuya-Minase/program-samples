@@ -14,8 +14,9 @@ const StyledImage = styled.img`
 interface Props {
   url: string;
 }
-export const Image: React.VFC<Props> = ({url}) => {
+export const Image = ({ url }: Props): JSX.Element => {
   return <Wrapper>
+    <img src={url} />
     <StyledImage src={url} />
   </Wrapper>;
 };

@@ -23,6 +23,5 @@ module.exports = {
         "jsx-a11y"
     ],
     "rules": {
-        "jsx-a11y/rule-name": 2
     }
 };
