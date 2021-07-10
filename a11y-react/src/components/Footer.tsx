@@ -5,6 +5,9 @@ const FooterWrapper = styled.footer`
   background-color: #888;
   color: #333;
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 `;
 const Copyright = styled.small``;
 
