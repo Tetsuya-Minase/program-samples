@@ -25,7 +25,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "acot": "npx acot run"
+    "acot": "npx acot run",
+    "lighthouse": "lighthouse --output-path report.json --output json --chrome-flags=\"--headless\""
   },
   "browserslist": {
     "production": [
