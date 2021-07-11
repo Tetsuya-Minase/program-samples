@@ -20,7 +20,7 @@ export const Main: React.VFC = () => {
       <Paragraph>{'あいうえお'.repeat(100)}</Paragraph>
       <Paragraph>
         普段天気予報は<Link href="https://weather.yahoo.co.jp/weather/" target="_blank">ヤフー天気</Link>か<Link href="https://www.jma.go.jp/bosai/forecast/" target="_blank">気象庁の天気予報</Link>を見ています。
-        <Link href="https://yahoo.co.jp" />
+        {/* <a href="https://yahoo.co.jp"/> */}
       </Paragraph>
       <Paragraph>{'かきくけこ'.repeat(100)}</Paragraph>
       <Paragraph>{'さしすせそ'.repeat(100)}</Paragraph>
