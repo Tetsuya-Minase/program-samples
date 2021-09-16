@@ -9,11 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "linaria": "^3.0.0-beta.13",
     "next": "11.1.2",
+    "next-linaria": "^0.11.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.5",
     "@types/react": "17.0.21",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
