@@ -59,7 +59,8 @@
         "height": 1080,
         "resizable": true,
         "title": "Tauri Sample",
-        "width": 1920
+        "width": 1920,
+        "alwaysOnTop": true
       }
     ]
   }
