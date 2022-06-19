@@ -1,0 +1,12 @@
+<main>
+  <p>
+    Please input your name.
+  </p>
+  <label style="display: block">
+    <input type="text" [formControl]="nameForm"/>
+  </label>
+  <button (click)="greet()">Greet</button>
+  <p>
+    {{ message }}
+  </p>
+</main>
